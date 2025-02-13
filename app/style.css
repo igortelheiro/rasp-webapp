@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 64px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    height: 600px;
+    overflow: auto;
+}
+
+.container.active {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3f51b5;
+    color: white;
+}
+
+th:first-child {
+    width: 40%;
+}
+
+@media (min-width:850px) {
+    th:first-child {
+        width: 70%;
+    }
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+video, canvas {
+    display: inherit;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#canvas-container {
+    display: none;
+    margin-top: 20px;
+}
