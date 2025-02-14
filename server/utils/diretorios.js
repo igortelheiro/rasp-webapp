@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const facesDir = path.join(__dirname, '../../../face-recon/coletas_faciais');
+const facesDir = path.join(__dirname, '../coletas_faciais');
 
 function criarPastaSeNaoExiste(diretorio) {
     if (!fs.existsSync(diretorio)) {

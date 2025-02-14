@@ -1,6 +1,7 @@
+const path = require('path');
 const { spawn } = require("child_process");
 
-const pythonFaceValidatorPath = "../../face-recon/face-validator.py";
+const pythonFaceValidatorPath = path.join(__dirname, "../face-validator.py");
 
 let pythonProcess = null;
 
