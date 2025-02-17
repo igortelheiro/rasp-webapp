@@ -1,3 +1,4 @@
 /server/node_modules/**
 /server/db/**
 /server/coletas_faciais/**
+/server/venv/**
