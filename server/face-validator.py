@@ -1,6 +1,7 @@
 import cv2
 import os
 import face_recognition
+import time
 
 # Função para carregar as imagens cadastradas e codificar as faces
 def carregar_faces_cadastradas(directory):
@@ -24,6 +25,8 @@ cap = cv2.VideoCapture(0)
 
 # Cria uma janela única para exibição
 cv2.namedWindow("Verificação de Rosto", cv2.WINDOW_NORMAL)
+
+last_display_time = time.time()
 
 while True:
     # Captura o quadro da webcam
@@ -53,8 +56,11 @@ while True:
             cv2.rectangle(frame, (left, top), (right, bottom), color, 2)
             cv2.putText(frame, name, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
 
-    # Exibe o quadro com as verificações
-    cv2.imshow("Verificação de Rosto", frame)
+    # Exibe o quadro com as verificações a cada segundo
+    current_time = time.time()
+    if current_time - last_display_time >= 1:
+        cv2.imshow("Verificação de Rosto", frame)
+        last_display_time = current_time
 
     # Pressiona 'q' para sair do loop
     if cv2.waitKey(1) & 0xFF == ord('q'):
