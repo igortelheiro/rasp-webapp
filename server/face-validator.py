@@ -26,6 +26,7 @@ cap = cv2.VideoCapture(0)
 # Cria uma janela única para exibição
 cv2.namedWindow("Verificação de Rosto", cv2.WINDOW_NORMAL)
 
+# Instancia variável para controlar a exibição do quadro
 last_display_time = time.time()
 
 while True:
