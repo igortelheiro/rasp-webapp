@@ -55,7 +55,7 @@ async function startWebcam() {
 }
 
 //#region Pessoas
-const API_PESSOAS_URL = `http://${hostname}:3000/pessoas`;
+const API_PESSOAS_URL = `https://${hostname}:3000/pessoas`;
 
 async function carregarPessoas() {
     const response = await fetch(API_PESSOAS_URL);
@@ -151,7 +151,7 @@ function adicionarLinhaTabelaPessoas(nome) {
 //#endregion
 
 //#region Placas
-const API_PLACAS_URL = `http://${hostname}:3000/placas`;
+const API_PLACAS_URL = `https://${hostname}:3000/placas`;
 
 async function carregarPlacas() {
     const response = await fetch(API_PLACAS_URL);
