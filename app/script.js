@@ -53,7 +53,7 @@ async function startWebcam() {
 }
 
 //#region Pessoas
-const API_PESSOAS_URL = 'http://localhost:3000/pessoas';
+const API_PESSOAS_URL = `http://${window.location.hostname}:3000/pessoas`;
 
 async function carregarPessoas() {
     const response = await fetch(API_PESSOAS_URL);
@@ -149,7 +149,7 @@ function adicionarLinhaTabelaPessoas(nome) {
 //#endregion
 
 //#region Placas
-const API_PLACAS_URL = 'http://localhost:3000/placas';
+const API_PLACAS_URL = `http://${window.location.hostname}:3000/placas`;
 
 async function carregarPlacas() {
     const response = await fetch(API_PLACAS_URL);
@@ -208,12 +208,12 @@ function adicionarLinhaTabelaPlacas(placa) {
     let btnEditar = document.createElement("button");
     btnEditar.innerText = "Editar";
     btnEditar.classList.add("btn", "blue", "lighten-2", "waves-effect", "waves-light");
-    btnEditar.onclick = function() { editarPlaca(placa); };
+    btnEditar.onclick = function () { editarPlaca(placa); };
 
     let btnRemover = document.createElement("button");
     btnRemover.innerText = "Excluir";
     btnRemover.classList.add("btn", "red", "lighten-2", "waves-effect", "waves-light");
-    btnRemover.onclick = function() { removerPlaca(placa); };
+    btnRemover.onclick = function () { removerPlaca(placa); };
 
     colunaAcoes.appendChild(btnEditar);
     colunaAcoes.appendChild(document.createTextNode(" "));
