@@ -7,7 +7,8 @@ This project is a web application for managing vehicle license plates and facial
 - `server/`: Contains the backend server code.
 - `app/`: Contains the frontend code.
 - `routes/`: Contains the route handlers for the backend.
-- `face-recon/`: Contains the facial recognition data.
+- `utils/`: Contains utility scripts and helper functions.
+- `certs/`: Contains SSL certificates for secure connections.
 
 ## Getting Started
 
