@@ -24,9 +24,16 @@ This project is a web application for managing vehicle license plates and facial
     cd rasp-webapp
     ```
 
-2. Install the dependencies:
+2. Install the Node.js dependencies:
     ```sh
     npm install
+    ```
+
+3. Create a Python virtual environment and install the required Python dependencies (this may take a while):
+    ```sh
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install cmake face-recognition opencv-python
     ```
 
 ### Running the Application
